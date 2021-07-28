@@ -1,7 +1,7 @@
 # Bootstrap-Boilerplate
 
-### Day 3 Take Home Challenge
-The Take Home Challenge involved the following:
+### JavaScript Final Magic 8 Ball
+<!-- The Take Home Challenge involved the following:
 1. Read the Documentation Best Practices article (I did)
 2. Complete the README.md (that's what this is)
 3. Save to the new branch "readme" (done)
@@ -23,4 +23,4 @@ Push your changes to your starter-files branch
 > The above Daily Challenge was completed during class and has been uploaded to my Main Branch
 
 ## Prequidites
-None
+None -->
