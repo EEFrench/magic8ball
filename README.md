@@ -1,6 +1,6 @@
-# Bootstrap-Boilerplate
+# Majyk 8 Ball
 
-### JavaScript Final Magic 8 Ball
+### JavaScript Final
 <!-- The Take Home Challenge involved the following:
 1. Read the Documentation Best Practices article (I did)
 2. Complete the README.md (that's what this is)
