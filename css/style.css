@@ -7,19 +7,19 @@ body, html {
 }
 
 /* TOPBAR */
-.topnav {
-  padding-left: 0px;  
-  top: 0;
+.topbar {
   position: sticky;
   overflow: hidden;
   font-family: "WW2 Blackletter HPLHS";
   text-align: center;
-  z-index: 25;
+  z-index: ;
 }
 
-.topnav h1 {
+.topbar h1 {
   color: white;
   font-size: 50px;
+  text-shadow: 4px 4px black;
+  
 }
 
 h2{
@@ -63,15 +63,18 @@ h2{
   .sidenav a:hover {
     color: #ffa202;
   }
-  
-    @media screen and (max-height: 450px) {
-    .sidenav {padding-top: 15px;}
-    .sidenav a {font-size: 18px;}
+
+  .quest, .input, ball {
+    display: inline-block;
   }
 
 
 
 
+    @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
   
 @media screen and (min-width: 601px) {
     .body{

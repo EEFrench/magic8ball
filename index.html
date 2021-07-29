@@ -12,7 +12,7 @@
 </head>
 <body>
   <!-- TOPBAR -->
-<div class="topnav class caption container-fluid d-flex flex-column align-items-center justify-content-center border text-white p-5" style="background-color: #c65c29;">
+<div class="topbar" style="background-color: #c65c29;">
       <h1>The Majyk 8 Ball</h1>
 </div>
 
@@ -28,17 +28,24 @@
 </div>
 
  <!-- THE QUESTION PROMPT  -->
-<h2> WHAT... <br> Is your Question???</h2>
-<input type="text" name="question" id="question">
-<button onclick="get_random_image()">Feeling Lucky?</button>
+<div class = "quest">
+    <h2> WHAT...  Is your Question ("YES" or "NO")???</h2>
+</div>
 
+<!-- QUESTION INPUT  -->
+<div class ="input">
+    <input type="text" name="question" id="question">
+    <button onclick="get_random_image()">Feeling Lucky?</button>
+</div>
 <br><br>
 
 <!-- THE BALL  -->
-<!-- <div id ="ball"></div> -->
+<div id="ball">
+    <img id="image_shower"/>
+</div>
 
-<div id="container">
-  <div id="inner_container">
+<!-- THE ANSWER  -->
+<div class="answer">
     <img id="image_shower"/>
 </div>
 
