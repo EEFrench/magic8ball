@@ -2,7 +2,7 @@
 let img = document.createElement("img");
 img.width=500 //SETS IMAGE SIZE
 img.src = "../img/01.png"; //SELECTS IMAGE
-let src = document.getElementById("ball");
+let src = document.getElementById("inner_container");
 src.appendChild(img);
 
 //GET IMAGES
@@ -40,21 +40,15 @@ image_array = [
 //     document.getElementById("ball").src = `./img/${answer}`
 // }
 
-// // Get all the images
-// image_array = [
-//     '1.jpg',
-//     '2.jpg',
-//     '3.jpg',
-//     '4.jpg'
-//   ]
-  
   function get_random_image(){
     // Get a random index
     random_index = Math.floor(Math.random() * image_array.length);
   
     // Get an image at the random_index
-    selected_image = image_array[random_index]
+    selected_image = image_array[random_index];
   
     // Display the image
     document.getElementById('image_shower').src = `../img/${selected_image}`
   }
+
+  //.width=500
