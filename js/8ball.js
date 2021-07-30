@@ -1,14 +1,14 @@
 //ADD AND SIZE IMAGE TO HTML DOC
 let img = document.createElement("img");
-img.width=500 //SETS IMAGE SIZE
+//img.width=500 //SETS IMAGE SIZE
 img.src = "../img/01.png"; //SELECTS IMAGE
 let src = document.getElementById("ball");
 src.appendChild(img);
 
 //GET IMAGES
 image_array = [
-    '01.png',
-    '02.png',
+    // '01.png',
+    // '02.png',
     '03.png',
     '04.png',
     '05.png',
