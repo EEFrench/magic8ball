@@ -77,59 +77,53 @@ function toggleFormUserInfo() {
  
 }
 
-//ADD INITIAL IMAGE TO HTML DOC
-let img = document.createElement("img");
-img.src = "../img/01.png" //SELECTS IMAGE
-let src = document.getElementById("ballImage");
-src.appendChild(img);
-
 //ARRAY OF IMAGE IDs
-// ballImage_array = [
-//     '/img/03.png',
-//     '/img/04.png',
-//     '/img/05.png',
-//     '/img/06.png',
-//     '/img/07.png',
-//     '/img/08.png',
-//     '/img/09.png',
-//     '/img/10.png',
-//     '/img/11.png',
-//     '/img/12.png',
-//     '/img/13.png',
-//     '/img/14.png',
-//     '/img/15.png',
-//     '/img/16.png',
-//     '/img/17.png',
-//     '/img/18.png',
-//     '/img/19.png',
-//     '/img/20.png',
-//     '/img/21.png',
-//     '/img/22.png',
-//     '/img/23.png'
-// ]
 ballImage_array = [
-  '03.png',
-  '04.png',
-  '05.png',
-  '06.png',
-  '07.png',
-  '08.png',
-  '09.png',
-  '10.png',
-  '11.png',
-  '12.png',
-  '13.png',
-  '14.png',
-  '15.png',
-  '16.png',
-  '17.png',
-  '18.png',
-  '19.png',
-  '20.png',
-  '21.png',
-  '22.png',
-  '23.png'
+    '/img/03.png',
+    '/img/04.png',
+    '/img/05.png',
+    '/img/06.png',
+    '/img/07.png',
+    '/img/08.png',
+    '/img/09.png',
+    '/img/10.png',
+    '/img/11.png',
+    '/img/12.png',
+    '/img/13.png',
+    '/img/14.png',
+    '/img/15.png',
+    '/img/16.png',
+    '/img/17.png',
+    '/img/18.png',
+    '/img/19.png',
+    '/img/20.png',
+    '/img/21.png',
+    '/img/22.png',
+    '/img/23.png'
 ]
+// ballImage_array = [
+//   '03.png',
+//   '04.png',
+//   '05.png',
+//   '06.png',
+//   '07.png',
+//   '08.png',
+//   '09.png',
+//   '10.png',
+//   '11.png',
+//   '12.png',
+//   '13.png',
+//   '14.png',
+//   '15.png',
+//   '16.png',
+//   '17.png',
+//   '18.png',
+//   '19.png',
+//   '20.png',
+//   '21.png',
+//   '22.png',
+//   '23.png'
+// ]
 
 //GET IMAGE FUNCTION
 function get_random_image(){
@@ -138,7 +132,8 @@ function get_random_image(){
   // GET RANDOM BALL IMAGE
   selected_image = ballImage_array[random_index];
   // DISPLAY BALL IMAGE
-  document.getElementById('ballImage').src = `img/${selected_image}`;
+  document.getElementById('ballImage').src = selected_image;
+  //document.getElementById('ballImage').src = `img/${selected_image}`;
   //document.getElementById('ballImage').src = `${selected_image}`
 }
 
