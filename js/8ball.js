@@ -16,7 +16,7 @@ let restartButton = document.createElement('button');
 document.body.appendChild(questionElement);
 
 //LABEL RESTART BUTTON
-restartButton.innerHTML = 'Restart';
+restartButton.innerHTML = 'Do you wish to try again??';
 
 //DISPLAY RESTART BUTTON AND ANSWER
 questionElement.appendChild(repeatQuestion);
