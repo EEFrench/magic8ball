@@ -138,7 +138,7 @@ function get_random_image(){
   // GET RANDOM BALL IMAGE
   selected_image = ballImage_array[random_index];
   // DISPLAY BALL IMAGE
-  document.getElementById('ballImage').src = `img/${selected_image}`
+  document.getElementById('ballImage').src = `img/${selected_image}`;
   //document.getElementById('ballImage').src = `${selected_image}`
 }
 
