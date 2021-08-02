@@ -1,9 +1,13 @@
 @import url("../css/fonts.css");
 
 body, html {
-  background-color: #FFA202;
   padding-left: 120px;
   padding-right: 15px;
+  background-image: url(../img/Background.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
 }
 
 /* TOPBAR */
