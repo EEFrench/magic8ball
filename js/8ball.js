@@ -15,7 +15,7 @@ let repeatQuestion = document.getElementById('MagicAnswer');
 let restartButton = document.createElement('button');
 document.body.appendChild(questionElement);
 
-//CREATE RESTART BUTTON
+//LABEL RESTART BUTTON
 restartButton.innerHTML = 'Restart';
 
 //DISPLAY RESTART BUTTON AND ANSWER
@@ -27,7 +27,7 @@ questionElement.style.display = 'none';
 restartButton.addEventListener('click', function() {
     toggleFormUserInfo();
     setInputValues('', '', '');
-    removeImage
+    removeImage();
 })
 
 //SUBMIT QUESTION FUNCTION
@@ -78,8 +78,8 @@ function toggleFormUserInfo() {
 }
 
 //ADD INITIAL IMAGE TO HTML DOC
-let img = document.createElement("img");
-img.src = "../img/01.png" //SELECTS IMAGE
+//let img = document.createElement("img");
+//img.src = "../img/01.png" //SELECTS IMAGE
 //let src = document.getElementById("ball");
 //src.appendChild(img);
 
@@ -116,11 +116,12 @@ function get_random_image(){
   // GET RANDOM BALL IMAGE
   selected_image = ballImage_array[random_index];
   // DISPLAY BALL IMAGE
-  document.getElementById('image_shower').src = `../img/${selected_image}`
+  document.getElementById('ballImage').src = `../img/${selected_image}`
 
 }
 
 //REMOVE IMAGE FUNCTION
 function removeImage(){
-  image_shower.parentNode.removeChild('image_shower');
+  let remove = document.getElementById('ballImage');
+  remove.removeChild(remove.childNodes[0]);
 }
