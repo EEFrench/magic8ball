@@ -39,11 +39,11 @@ h2{
     z-index: 1;
     top: 0;
     left: 15PX;
-    background-color: #340146;
+    background-color: #c65c29;
     overflow-x: hidden;
     padding-top: 20px;
     padding: 10px;
-    text-shadow: 2px 2px #9a01cd;
+    text-shadow: 2px 2px #340146;
   }
   
   .sidenav .navlink{

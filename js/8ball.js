@@ -78,10 +78,10 @@ function toggleFormUserInfo() {
 }
 
 //ADD INITIAL IMAGE TO HTML DOC
-//let img = document.createElement("img");
-//img.src = "../img/01.png" //SELECTS IMAGE
-//let src = document.getElementById("ball");
-//src.appendChild(img);
+let img = document.createElement("img");
+img.src = "../img/01.png" //SELECTS IMAGE
+let src = document.getElementById("ballImage");
+src.appendChild(img);
 
 //ARRAY OF IMAGE IDs
 ballImage_array = [
