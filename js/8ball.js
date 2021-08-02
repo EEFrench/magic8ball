@@ -1,11 +1,6 @@
 //INSERT NAME INTO TOPBAR
-let Magic = document.getElementById('MagicAnswer');
+let Magic = document.getElementById('title');
 Magic.innerText = "The Majyk 8 Ball";
-
-//ADD QUESTION INPUT
-// const question = document.createElement('input');
-// document.body.appendChild(question);
-//const input.getElementById(input);
 
 let form = document.createElement('form');
 document.body.appendChild(form);
@@ -14,43 +9,44 @@ document.body.appendChild(form);
 let questionInput = addInput('input', 'ASK');
 let submitButton = addButton('Do you feel Lucky?');
 
-
-
 //ADD ELEMENTS TO DISPLAY QUESTION
-let userInfoElement = document.getElementById('input');
-let userNameElement = document.createElement('h1');
+let questionElement = document.getElementById('input');
+let repeatQuestion = document.getElementById('MagicAnswer');
 let restartButton = document.createElement('button');
-document.body.appendChild(userInfoElement);
+document.body.appendChild(questionElement);
 
 //CREATE RESTART BUTTON
 restartButton.innerHTML = 'Restart';
 
-//DISPLAY RESTART BUTTON
-userInfoElement.appendChild(userNameElement);
-userInfoElement.appendChild(restartButton);
-userInfoElement.style.display = 'none';
+//DISPLAY RESTART BUTTON AND ANSWER
+questionElement.appendChild(repeatQuestion);
+questionElement.appendChild(restartButton);
+questionElement.style.display = 'none';
 
-
+//RESTART FUNCTION
 restartButton.addEventListener('click', function() {
     toggleFormUserInfo();
     setInputValues('', '', '');
-
+    removeImage
 })
 
+//SUBMIT QUESTION FUNCTION
 form.addEventListener('submit', function(event) {
   event.preventDefault();
-  let username = form[0].value;
-  displayUserInfo(username);
+  let question = form[0].value;
+  displayUserInfo(question);
   toggleFormUserInfo();
   get_random_image();
 })
 
+//ADD INPUT FUNCTION
 function addInput(type, placeholder) {
   let input = document.createElement(type);
   form.appendChild(input);
   input.placeholder = placeholder;
 }
 
+//ADD BUTTON FUNCTION
 function addButton(text){
   let button = document.createElement('button');
   form.appendChild(button);
@@ -58,22 +54,25 @@ function addButton(text){
   return button;
 }
 
-function displayUserInfo(username) {
-  userNameElement.innerText = username;
+//DISPLAY QUESTION ON SCREEN
+function displayUserInfo(question) {
+  repeatQuestion.innerText = question;
 }
 
-function setInputValues(username) {
-  form[0].value = username;
+
+function setInputValues(question) {
+  form[0].value = question;
 }
+
 
 function toggleFormUserInfo() {
 
   if (form.style.display === 'none') {
       form.style.display = 'block';
-      userInfoElement.style.display = 'none';
+      questionElement.style.display = 'none';
   } else {
       form.style.display = 'none';
-      userInfoElement.style.display = 'block';
+      questionElement.style.display = 'block';
   }
  
 }
@@ -110,15 +109,18 @@ ballImage_array = [
 ]
 
 
+//GET IMAGE FUNCTION
+function get_random_image(){
+  // GET RANDOM NUMBER
+  random_index = Math.floor(Math.random() * ballImage_array.length);
+  // GET RANDOM BALL IMAGE
+  selected_image = ballImage_array[random_index];
+  // DISPLAY BALL IMAGE
+  document.getElementById('image_shower').src = `../img/${selected_image}`
 
-//FUNCTIONS
-  function get_random_image(){
-    // GET RANDOM NUMBER
-    random_index = Math.floor(Math.random() * ballImage_array.length);
-    // GET RANDOM BALL IMAGE
-    selected_image = ballImage_array[random_index];
-    // DISPLAY BALL IMAGE
-    document.getElementById('image_shower').src = `../img/${selected_image}`
+}
 
-  }
-
+//REMOVE IMAGE FUNCTION
+function removeImage(){
+  image_shower.parentNode.removeChild('image_shower');
+}
