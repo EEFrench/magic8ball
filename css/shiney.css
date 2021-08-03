@@ -1,6 +1,7 @@
 @import url("../css/style.css");
 
 body {
+  padding-left: 200px;
   background: linear-gradient(90deg, rgba(177, 64, 200, 1) 0%, 
               rgba(109, 9, 121, 1) 35%, rgba(45, 1, 62, 1) 100%);
 }
@@ -17,7 +18,7 @@ body {
     padding-top: 20px;
     padding: 10px;
     text-shadow: 2px 2px #340146;
-  }
+}
 
 .glow {
   font-size: 70px;
@@ -56,6 +57,6 @@ h2{
       transform: rotate(0deg);
     }
     to {
-      transform: rotate(359deg);
+      transform: rotate(-359deg);
     }
   } 
