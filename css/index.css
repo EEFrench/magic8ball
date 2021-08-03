@@ -1,5 +1,11 @@
 @import url("../css/style.css");
 
+.main {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 22vh;
+  }
 
 .rotate {
     animation: rotation 50s infinite linear;
