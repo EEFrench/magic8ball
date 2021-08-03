@@ -25,27 +25,27 @@ questionElement.style.display = 'none';
 
 //ARRAY OF IMAGE IDs
 ballImageArray = [
-    '../img/03.png',
-    '../img/04.png',
-    '../img/05.png',
-    '../img/06.png',
-    '../img/07.png',
-    '../img/08.png',
-    '../img/09.png',
-    '../img/10.png',
-    '../img/11.png',
-    '../img/12.png',
-    '../img/13.png',
-    '../img/14.png',
-    '../img/15.png',
-    '../img/16.png',
-    '../img/17.png',
-    '../img/18.png',
-    '../img/19.png',
-    '../img/20.png',
-    '../img/21.png',
-    '../img/22.png',
-    '../img/23.png'
+    './img/03.png',
+    './img/04.png',
+    './img/05.png',
+    './img/06.png',
+    './img/07.png',
+    './img/08.png',
+    './img/09.png',
+    './img/10.png',
+    './img/11.png',
+    './img/12.png',
+    './img/13.png',
+    './img/14.png',
+    './img/15.png',
+    './img/16.png',
+    './img/17.png',
+    './img/18.png',
+    './img/19.png',
+    './img/20.png',
+    './img/21.png',
+    './img/22.png',
+    './img/23.png'
 ]
 
 
@@ -55,7 +55,7 @@ function getRandomImage(){
   let selectedImage = ballImageArray[randomIndex];
   //document.getElementById('ballImage').src = selected_image;
   //document.getElementById('ballImage').src = `img/${selectedImage}`;
-  document.getElementById('ballImage').src = '../img/01.png'
+  document.getElementById('ballImage').src = './img/01.png'
 }
 
 //REMOVE IMAGE FUNCTION
