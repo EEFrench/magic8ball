@@ -24,7 +24,7 @@ questionElement.appendChild(restartButton);
 questionElement.style.display = 'none';
 
 //ARRAY OF IMAGE IDs
-ballImage_array = [
+ballImageArray = [
     '../img/03.png',
     '../img/04.png',
     '../img/05.png',
@@ -50,17 +50,17 @@ ballImage_array = [
 
 
 //GET IMAGE FUNCTION
-function get_random_image(){
-  let random_index = Math.floor(Math.random() * ballImage_array.length);
-  let selected_image = ballImage_array[random_index];
+function getRandomImage(){
+  let randomIndex = Math.floor(Math.random() * ballImageArray.length);
+  let selectedImage = ballImageArray[randomIndex];
   //document.getElementById('ballImage').src = selected_image;
-  //document.getElementById('ballImage').src = `img/${selected_image}`;
+  //document.getElementById('ballImage').src = `img/${selectedImage}`;
   document.getElementById('ballImage').src = '../img/01.png'
 }
 
 //REMOVE IMAGE FUNCTION
 function removeImage(){
-  selected_image.style.display = '';
+  selectedImage.style.display = '';
 }
 
 //RESTART FUNCTION
@@ -76,7 +76,7 @@ event.preventDefault();
 let question = form[0].value;
 displayUserInfo(question);
 toggleFormUserInfo();
-get_random_image();
+getRandomImage();
 })
 
 //ADD INPUT FUNCTION
