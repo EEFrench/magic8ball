@@ -4,14 +4,34 @@
     display: flex;
     justify-content: center;
     position: relative;
-    top: 22vh;
+    top: 10vh;
   }
+
+button{
+    
+}
+
+
+
 
 .rotate {
     animation: rotation 50s infinite linear;
   }
 
   @keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+  } 
+
+  .spin{
+    animation: spin .25s;
+}
+
+@keyframes spin {
     from {
       transform: rotate(0deg);
     }

@@ -28,54 +28,38 @@ ballImageArray = [
 ]
 
 
-//GET IMAGE FUNCTION
-function getRandomImage(){
-  let randomIndex = Math.floor(Math.random() * ballImageArray.length);
-  let selectedImage = ballImageArray[randomIndex];
-  document.getElementById('ballImage').src = selectedImage;
-}
-
-// Used getElementByID for the image. Started with the extra image (looks better than start to me personally)
-
-const start = document.getElementById('start');
+let start = document.getElementById('start');
 start.src = './img/01.png';
-//start.style.width = '400px';
 
-// Used querySelector for the remaining variables
 
 const ask = document.querySelector('label');
-ask.innerHTML = 'Ask me anything!';
-ask.style.fontSize = '36px';
+ask.innerHTML = ' ';
+
 
 const input = document.querySelector('input');
-
-// First button has an click event where it will perform a function created below that hides all elements except the image. The event also changes the source of the image to a random one from the list of 20. This button will throw an alert out if you attempt to press it without entering anything into the input field.
 
 const button = document.querySelector('#button');
 button.innerHTML = 'Do you feel Lucky?';
 button.addEventListener('click', function() {
 
     if (input.value < 1) {
-        alert('Please ask a question!');
+        start.src = './img/02.png';
+        ask.innerHTML = 'THAT...  is not a Question!';
+        
 }   else {
-    shake();
-    getRandomImage
-    //ask.innerHTML = response[Math.floor(Math.random() * response.length)];
-    setTimeout(hideAll, 2000);
+    spin();
+    setTimeout(hideAll, 600);
     
 }});
 
-// This is the second button. It starts out being hidden, but will appear after the first button is pressed. This button has an event that will perform a function created below that will return all elements to their starting positions.
 
 const button2 = document.querySelector('.button');
-button2.innerHTML = 'Try again?';
+button2.innerHTML = 'Do you wish to ask again?';
 button2.style.display = 'none';
 button2.addEventListener('click', function () {
     returnAll();
 })
 
-
-// hideAll will hide the original buttons, but will allow the Try Again button to appear. It also changes the label to display the input value.
 
 function hideAll() {
     input.style.display = 'none';
@@ -85,10 +69,9 @@ function hideAll() {
     start.src =ballImageArray[Math.floor(Math.random() *ballImageArray.length)];
 }
 
-// returnAll will return all the original buttons, but will hide the Try Again button. It also displays the original start image of the magic 8 ball and will delete the contents of the input field from before.
 
 function returnAll() {
-    ask.innerHTML = 'Ask me anything!';
+    ask.innerHTML = ' ';
     input.style.display = 'block';
     input.value = '';
     button.style.display = 'block';
@@ -96,72 +79,13 @@ function returnAll() {
     button2.style.display = 'none';
 }
 
-// function that will add a class that will animate the magic 8 ball, but after 2 seconds, it will be removed.
 
-function shake() {
-    start.classList.add('shake');
-
+function spin() {
+    start.src = './img/blur1.png';
+    start.classList.add('spin');
+    
     setTimeout(function() {
-        start.classList.remove('shake');
-    }, 2000)
+        start.classList.remove('spin');
+    }, 1000);
+    
 }
-
-
-// //REMOVE IMAGE FUNCTION
-// function removeImage(){
-//   selectedImage.style.display = '';
-// }
-
-// //RESTART FUNCTION
-// restartButton.addEventListener('click', function() {
-//   toggleFormUserInfo();
-//   setInputValues('', '', '');
-//   removeImage();
-// })
-
-// //SUBMIT QUESTION FUNCTION
-// form.addEventListener('submit', function(event) {
-// event.preventDefault();
-// let question = form[0].value;
-// displayUserInfo(question);
-// toggleFormUserInfo();
-// getRandomImage();
-// })
-
-// //ADD INPUT FUNCTION
-// function addInput(type, placeholder) {
-// let input = document.createElement(type);
-// form.appendChild(input);
-// input.placeholder = placeholder;
-// }
-
-// //ADD BUTTON FUNCTION
-// function addButton(text){
-// let button = document.createElement('button');
-// form.appendChild(button);
-// button.innerHTML = text;
-// return button;
-// }
-
-// //DISPLAY QUESTION ON SCREEN
-// function displayUserInfo(question) {
-// repeatQuestion.innerText = question;
-// }
-
-
-// function setInputValues(question) {
-// form[0].value = question;
-// }
-
-
-// function toggleFormUserInfo() {
-
-// if (form.style.display === 'none') {
-//     form.style.display = 'block';
-//     questionElement.style.display = 'none';
-// } else {
-//     form.style.display = 'none';
-//     questionElement.style.display = 'block';
-// }
-
-// }

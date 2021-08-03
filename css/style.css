@@ -75,10 +75,6 @@ h2{
     display: inline-block;
   }
 
-  .ballAnswer{
-
-  }
-
 
     @media screen and (max-height: 450px) {
     .sidenav {padding-top: 15px;}
