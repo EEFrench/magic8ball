@@ -27,19 +27,15 @@ ballImageArray = [
     './img/23.png'
 ]
 
-
+//ADD STARTING IMAGE
 let start = document.getElementById('start');
 start.src = './img/01.png';
 
-
+//ADD LINE FOR REPEAT OF QUESTION IN TOPBAR
 const ask = document.querySelector('label');
 ask.innerHTML = ' ';
 
-
-const input = document.querySelector('input');
-
-const button = document.querySelector('#button');
-button.innerHTML = 'Do you feel Lucky?';
+//FUNCTION TO FORCE A QUESTION, AND SPIN THE BALL FOR ANSWER
 button.addEventListener('click', function() {
 
     if (input.value < 1) {
@@ -48,19 +44,17 @@ button.addEventListener('click', function() {
         
 }   else {
     spin();
-    setTimeout(hideAll, 600);
+    setTimeout(hideAll, 500);
     
 }});
 
-
-const button2 = document.querySelector('.button');
-button2.innerHTML = 'Do you dare ask again?';
+//HIDE RETURN BUTTON
 button2.style.display = 'none';
 button2.addEventListener('click', function () {
-    returnAll();
+    reset();
 })
 
-
+//FUNCTION HIDE MAIN BUTTON & INPUT, AND PUT QUESTION IN TOPBAR
 function hideAll() {
     input.style.display = 'none';
     button.style.display = 'none';
@@ -69,8 +63,8 @@ function hideAll() {
     start.src =ballImageArray[Math.floor(Math.random() *ballImageArray.length)];
 }
 
-
-function returnAll() {
+//FUNCTION TO RESET TO RESET TO STARTING SCENE
+function reset() {
     ask.innerHTML = ' ';
     input.style.display = 'block';
     input.value = '';
@@ -79,7 +73,7 @@ function returnAll() {
     button2.style.display = 'none';
 }
 
-
+//ADD SPIN EFFECT TO MAIN 8BALL
 function spin() {
     start.src = './img/blur1.png';
     start.classList.add('spin');
