@@ -53,9 +53,9 @@ ballImageArray = [
 function getRandomImage(){
   let randomIndex = Math.floor(Math.random() * ballImageArray.length);
   let selectedImage = ballImageArray[randomIndex];
-  //document.getElementById('ballImage').src = selected_image;
+  document.getElementById('ballImage').src = selectedImage;
   //document.getElementById('ballImage').src = `img/${selectedImage}`;
-  document.getElementById('ballImage').src = './img/01.png'
+  //document.getElementById('ballImage').src = './img/01.png'
 }
 
 //REMOVE IMAGE FUNCTION
