@@ -1,5 +1,6 @@
 @import url("../css/style.css");
 
+/*CENTER THE BALL*/
 .main {
     display: flex;
     justify-content: center;
@@ -7,13 +8,70 @@
     top: 10vh;
   }
 
-button{
-    
+input[type=text]{
+    font-size: 20px;
+    width: 400px;
 }
 
+/* MAKE THE BUTTON 3D  */
+  .btn {
+    background-color: #002a53;
+    background-image: -webkit-linear-gradient(283deg, rgba(255, 255, 255, 0.1) 50%, transparent 55%),-webkit-linear-gradient(top, rgba(255, 255, 255, 0.15), transparent);
+    border-radius: 6px;
+    box-shadow: 0 0 0 1px #091827 inset,0 0 0 2px rgba(255, 255, 255, 0.15) inset,0 4px 0 0      #071421,0 4px 0 1px rgba(0, 0, 0, 0.4),0 4px 4px 1px rgba(0, 0, 0, 0.5);
+    color: white !important;
+    display: block;
+    font-size: 25px;
+    height: 61px;
+    letter-spacing: -1px;
+    line-height: 61px;
+    margin: 50px;
+    position: relative;
+    text-align: center;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+    text-decoration: none !important;
+    -webkit-transition: all .2s linear;
+    width: 186px;
+    }
+      
+    .btn:hover {
+    background-color: #717171;
+    poisiton: relative;
+    top: -1px;
+    box-shadow: 0 0 0 1px #464242 inset,0 0 0 2px rgba(255, 255, 255, 0.15) inset,0 5px 0 0      #353333,0 5px 0 1px rgba(0, 0, 0, 0.4),0 5px 8px 1px rgba(0, 0, 0, 0.5);
+    }
+  
+
+  /* MAKE THE SECOND BUTTON 3D */
+  .button {
+    background-color: #340146;
+    background-image: -webkit-linear-gradient(283deg, rgba(255, 255, 255, 0.1) 50%, transparent 55%),-webkit-linear-gradient(top, rgba(255, 255, 255, 0.15), transparent);
+    border-radius: 6px;
+    box-shadow: 0 0 0 1px #23012f inset,0 0 0 2px rgba(255, 255, 255, 0.15) inset,0 4px 0 0      #110217,0 4px 0 1px rgba(0, 0, 0, 0.4),0 4px 4px 1px rgba(0, 0, 0, 0.5);
+    color: white !important;
+    display: block;
+    font-size: 25px;
+    height: 61px;
+    letter-spacing: -1px;
+    line-height: 61px;
+    margin: 50px;
+    position: relative;
+    text-align: center;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+    text-decoration: none !important;
+    -webkit-transition: all .2s linear;
+    width: 186px;
+    }
+      
+    .button:hover {
+    background-color: #717171;
+    poisiton: relative;
+    top: -1px;
+    box-shadow: 0 0 0 1px #464242 inset,0 0 0 2px rgba(255, 255, 255, 0.15) inset,0 5px 0 0      #353333,0 5px 0 1px rgba(0, 0, 0, 0.4),0 5px 8px 1px rgba(0, 0, 0, 0.5);
+    }
 
 
-
+/* MAKE THE 8BALL SLOWLY ROTATE  */
 .rotate {
     animation: rotation 50s infinite linear;
   }
@@ -27,6 +85,7 @@ button{
     }
   } 
 
+/* MAKE THE MAIN 8BALL SPIN IN JS  */
   .spin{
     animation: spin .25s;
 }

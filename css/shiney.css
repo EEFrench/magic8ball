@@ -2,8 +2,9 @@
 
 body {
   padding-left: 200px;
-  background: linear-gradient(90deg, rgba(177, 64, 200, 1) 0%, 
-              rgba(109, 9, 121, 1) 35%, rgba(45, 1, 62, 1) 100%);
+  /* background: linear-gradient(90deg, rgba(177, 64, 200, 1) 0%,  */
+              /* rgba(109, 9, 121, 1) 35%, rgba(45, 1, 62, 1) 100%); */
+  background-image: url(../img/tenor.gif);  
 }
 
 /*NAVBAR*/
@@ -18,6 +19,15 @@ body {
     padding-top: 20px;
     padding: 10px;
     text-shadow: 2px 2px #340146;
+    /* AN ATTEMPT TO ADD 3D TO SIDE BAR (USING THE BUTTON EFFECT), DIDN'T WORK, I DON'T KNOW WHY*/
+    background-image: -webkit-linear-gradient(283deg, rgba(255, 255, 255, 0.1) 50%, transparent 55%),-webkit-linear-gradient(top, rgba(255, 255, 255, 0.15), transparent);
+    border-radius: 6px;
+    box-shadow: 0 0 0 1px #091827 inset,0 0 0 2px rgba(255, 255, 255, 0.15) inset,0 4px 0 0      #071421,0 4px 0 1px rgba(0, 0, 0, 0.4),0 4px 4px 1px rgba(0, 0, 0, 0.5);
+    color: white !important;
+    text-align: center;
+    text-shadow: 4px 4px rgba(0, 0, 0, 0.5);
+    text-decoration: none !important;
+    -webkit-transition: all 10s linear;
 }
 
 .glow {

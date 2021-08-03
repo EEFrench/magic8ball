@@ -17,7 +17,17 @@ body, html {
   overflow: hidden;
   font-family: "WW2 Blackletter HPLHS";
   text-align: center;
-  z-index: ;
+  
+  /* AN ATTEMPT TO ADD 3D TO SIDE BAR (USING THE BUTTON EFFECT), DIDN'T WORK, BUT DON'T HATE IT*/
+  background-image: -webkit-linear-gradient(283deg, rgba(255, 255, 255, 0.1) 50%, transparent 55%),-webkit-linear-gradient(top, rgba(255, 255, 255, 0.15), transparent);
+  border-radius: 6px;
+  box-shadow: 0 0 0 1px #091827 inset,0 0 0 2px rgba(255, 255, 255, 0.15) inset,0 4px 0 0      #071421,0 4px 0 1px rgba(0, 0, 0, 0.4),0 4px 4px 1px rgba(0, 0, 0, 0.5);
+  color: white !important;
+  text-align: center;
+  text-shadow: 4px 4px rgba(0, 0, 0, 0.5);
+  text-decoration: none !important;
+  -webkit-transition: all 1s linear;
+  
 }
 
 .topbar h1 {
@@ -40,11 +50,22 @@ h2{
     z-index: 1;
     top: 0;
     left: 15PX;
-    background-color: #c65c29;
+    background-color: #ffa202;
     overflow-x: hidden;
     padding-top: 20px;
     padding: 10px;
     text-shadow: 2px 2px #340146;
+    
+    /* AN ATTEMPT TO ADD 3D TO SIDE BAR (USING THE BUTTON EFFECT), DIDN'T WORK, ODDLY, WITH THE CONSOLE OPEN IT HAS AN AWESOME FADE EFFECT...*/
+    background-image: -webkit-linear-gradient(283deg, rgba(255, 255, 255, 0.1) 50%, transparent 55%),-webkit-linear-gradient(top, rgba(255, 255, 255, 0.15), transparent);
+    border-radius: 6px;
+    box-shadow: 0 0 0 1px #091827 inset,0 0 0 2px rgba(255, 255, 255, 0.15) inset,0 4px 0 0      #071421,0 4px 0 1px rgba(0, 0, 0, 0.4),0 4px 4px 1px rgba(0, 0, 0, 0.5);
+    color: white !important;
+    text-align: center;
+    text-shadow: 4px 4px rgba(0, 0, 0, 0.5);
+    text-decoration: none !important;
+    -webkit-transition: all 10s linear;
+    width: 186px;
   }
   
   .sidenav .navlink{
@@ -68,7 +89,7 @@ h2{
   }
     
   .sidenav a:hover {
-    color: #ffa202;
+    color: #4d0f58;
   }
 
   .quest, .input, ball {

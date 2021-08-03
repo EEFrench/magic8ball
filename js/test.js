@@ -54,7 +54,7 @@ button.addEventListener('click', function() {
 
 
 const button2 = document.querySelector('.button');
-button2.innerHTML = 'Do you wish to ask again?';
+button2.innerHTML = 'Do you dare ask again?';
 button2.style.display = 'none';
 button2.addEventListener('click', function () {
     returnAll();
