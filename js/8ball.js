@@ -85,7 +85,7 @@ function reset() {
 
 //ADD SPIN EFFECT TO MAIN 8BALL
 function spin() {
-    start.src = './img/blur2.png';
+    start.src = './img/blur.png';
     start.classList.add('spin');
     
     setTimeout(function() {
@@ -96,7 +96,7 @@ function spin() {
 
 //ADD SPIN TO MORTIS BALL
 function spin2() {
-    start.src = './img/02.png';
+    start.src = './img/mortis.png';
     start.classList.add('spin2');
     laugh();
     setTimeout(function() {
@@ -105,7 +105,7 @@ function spin2() {
   
 }
 
-//SET THE lAUGH SOUND FILE
+//SET THE LAUGH SOUND FILE
 function laugh() {
     var audio = new Audio('sounds/VPLaugh.mp3');
     audio.play();
