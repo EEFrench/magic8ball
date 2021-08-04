@@ -41,7 +41,7 @@ button.addEventListener('click', function() {
     if (input.value < 1) {
         start.src = './img/02.png';
         ask.innerHTML = 'THAT...  is not a Question!';
-        
+        laugh
 }   else {
     spin();
     setTimeout(hideAll, 500);
@@ -83,3 +83,13 @@ function spin() {
     }, 1000);
     
 }
+
+
+//SET A SOUND FILE
+function laugh() {
+    const audioContext = new AudioContext();
+    const element = document.querySelector(audio);
+    const source = audioContext.createMediaElementSource(element);
+    source.connect(audioContext.destination)
+    audio.play();
+  }
