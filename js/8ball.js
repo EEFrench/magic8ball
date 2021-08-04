@@ -4,6 +4,8 @@ Magic.innerText = "The Majyk 8 Ball";
 
 //ARRAY OF IMAGE IDs
 ballImageArray = [
+    './img/01.png',
+    './img/02.png',
     './img/03.png',
     './img/04.png',
     './img/05.png',
@@ -40,7 +42,7 @@ Magic = [
 
 //ADD STARTING IMAGE
 let start = document.getElementById('start');
-start.src = './img/01.png';
+start.src = './img/start.png';
 
 //ADD LINE FOR REPEAT OF QUESTION IN TOPBAR
 const ask = document.querySelector('label');
