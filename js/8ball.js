@@ -81,7 +81,7 @@ function reset() {
     input.style.display = 'block';
     input.value = '';
     button.style.display = 'block';
-    start.src = './img/01.png';
+    start.src = './img/start.png';
     button2.style.display = 'none';
 }
 
