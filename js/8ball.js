@@ -2,27 +2,6 @@
 let Magic = document.getElementById('title');
 Magic.innerText = "The Majyk 8 Ball";
 
-let form = document.createElement('form');
-document.body.appendChild(form);
-
-//ADD INPUT AND BUTTON
-let questionInput = addInput('input', 'ASK');
-let submitButton = addButton('Do you feel Lucky?');
-
-//ADD ELEMENTS TO DISPLAY QUESTION
-let questionElement = document.getElementById('input');
-let repeatQuestion = document.getElementById('MagicAnswer');
-let restartButton = document.createElement('button');
-document.body.appendChild(questionElement);
-
-//LABEL RESTART BUTTON
-restartButton.innerHTML = 'Do you wish to try again??';
-
-//DISPLAY RESTART BUTTON AND ANSWER
-questionElement.appendChild(repeatQuestion);
-questionElement.appendChild(restartButton);
-questionElement.style.display = 'none';
-
 //ARRAY OF IMAGE IDs
 ballImageArray = [
     './img/03.png',
@@ -48,69 +27,69 @@ ballImageArray = [
     './img/23.png'
 ]
 
+//ADD STARTING IMAGE
+let start = document.getElementById('start');
+start.src = './img/01.png';
 
-//GET IMAGE FUNCTION
-function getRandomImage(){
-  let randomIndex = Math.floor(Math.random() * ballImageArray.length);
-  let selectedImage = ballImageArray[randomIndex];
-  document.getElementById('ballImage').src = selectedImage;
-}
+//ADD LINE FOR REPEAT OF QUESTION IN TOPBAR
+const ask = document.querySelector('label');
+ask.innerHTML = ' ';
 
-//REMOVE IMAGE FUNCTION
-function removeImage(){
-  selectedImage.style.display = '';
-}
+//FUNCTION TO FORCE A QUESTION, AND SPIN THE BALL FOR ANSWER
+button.addEventListener('click', function() {
 
-//RESTART FUNCTION
-restartButton.addEventListener('click', function() {
-  toggleFormUserInfo();
-  setInputValues('', '', '');
-  removeImage();
+    if (input.value < 1) {
+        start.src = './img/02.png';
+        ask.innerHTML = 'THAT...  is not a Question!';
+        laugh
+}   else {
+    spin();
+    setTimeout(hideAll, 500);
+    
+}});
+
+//HIDE RETURN BUTTON
+button2.style.display = 'none';
+button2.addEventListener('click', function () {
+    reset();
 })
 
-//SUBMIT QUESTION FUNCTION
-form.addEventListener('submit', function(event) {
-event.preventDefault();
-let question = form[0].value;
-displayUserInfo(question);
-toggleFormUserInfo();
-getRandomImage();
-})
-
-//ADD INPUT FUNCTION
-function addInput(type, placeholder) {
-let input = document.createElement(type);
-form.appendChild(input);
-input.placeholder = placeholder;
+//FUNCTION HIDE MAIN BUTTON & INPUT, AND PUT QUESTION IN TOPBAR
+function hideAll() {
+    input.style.display = 'none';
+    button.style.display = 'none';
+    button2.style.display = 'block';
+    ask.innerHTML = input.value;
+    start.src =ballImageArray[Math.floor(Math.random() *ballImageArray.length)];
 }
 
-//ADD BUTTON FUNCTION
-function addButton(text){
-let button = document.createElement('button');
-form.appendChild(button);
-button.innerHTML = text;
-return button;
+//FUNCTION TO RESET TO RESET TO STARTING SCENE
+function reset() {
+    ask.innerHTML = ' ';
+    input.style.display = 'block';
+    input.value = '';
+    button.style.display = 'block';
+    start.src = './img/01.png';
+    button2.style.display = 'none';
 }
 
-//DISPLAY QUESTION ON SCREEN
-function displayUserInfo(question) {
-repeatQuestion.innerText = question;
-}
-
-
-function setInputValues(question) {
-form[0].value = question;
+//ADD SPIN EFFECT TO MAIN 8BALL
+function spin() {
+    start.src = './img/blur1.png';
+    start.classList.add('spin');
+    
+    setTimeout(function() {
+        start.classList.remove('spin');
+    }, 1000);
+    
 }
 
 
-function toggleFormUserInfo() {
-
-if (form.style.display === 'none') {
-    form.style.display = 'block';
-    questionElement.style.display = 'none';
-} else {
-    form.style.display = 'none';
-    questionElement.style.display = 'block';
-}
-
-}
+//SET A SOUND FILE - DOESN'T WANT TO WORK...
+function laugh() {
+    const audioContext = new AudioContext();
+    const element = document.querySelector(audio);
+    const source = audioContext.createMediaElementSource(element);
+    source.connect(audioContext.destination)
+    audio.play();
+  }
