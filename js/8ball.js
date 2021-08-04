@@ -51,11 +51,12 @@ button.addEventListener('click', function() {
 
     if (input.value < 1) {
         laugh();
-        start.src = './img/02.png';
+        start.src = './img/blur2.png';
         ask.innerHTML = 'THAT...  is not a Question!';
         spin2();
 }   else {
     spin();
+    start.src = './img/02.png';
     setTimeout(hideAll, 150);
     
 }});
@@ -90,7 +91,6 @@ function spin() {
     start.src = './img/blur2.png';
     start.classList.add('spin');
     
-
     setTimeout(function() {
         start.classList.remove('spin');
     }, 1000);
@@ -108,7 +108,7 @@ function spin2() {
   
 }
 
-//SET A SOUND FILE
+//SET THE lAUGH SOUND FILE
 function laugh() {
     var audio = new Audio('sounds/VPLaugh.mp3');
     audio.play();
