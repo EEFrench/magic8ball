@@ -50,14 +50,11 @@ ask.innerHTML = ' ';
 button.addEventListener('click', function() {
 
     if (input.value < 1) {
-        laugh();
-        start.src = './img/blur2.png';
-        ask.innerHTML = 'THAT...  is not a Question!';
-        spin2();
+      ask.innerHTML = 'THAT...  is not a Question!';
+      spin2();
 }   else {
-    spin();
-    start.src = './img/02.png';
-    setTimeout(hideAll, 150);
+      spin();
+      setTimeout(hideAll, 150);
     
 }});
 
@@ -99,11 +96,11 @@ function spin() {
 
 //ADD SPIN TO MORTIS BALL
 function spin2() {
-  start.src = './img/02.png';
-  start.classList.add('spin2');
-  
-  setTimeout(function() {
-      start.classList.remove('spin2');
+    start.src = './img/02.png';
+    start.classList.add('spin2');
+    laugh();
+    setTimeout(function() {
+        start.classList.remove('spin2');
   }, 1000);
   
 }
