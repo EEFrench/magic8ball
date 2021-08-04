@@ -27,6 +27,17 @@ ballImageArray = [
     './img/23.png'
 ]
 
+Magic = [
+  './sounds/Wizard10thLevel.wav',
+  './sounds/WizardCastSpell.wav',
+  './sounds/WizardDeciding.wav',
+  './sounds/WizardEnterCombat.wav',
+  './sounds/WizardFindingSomething.wav',
+  './sounds/WizardGoFlag.wav',
+  './sounds/WizardSeeHostile.wav',
+  './sounds/WizardUpLevel.wav'
+]
+
 //ADD STARTING IMAGE
 let start = document.getElementById('start');
 start.src = './img/01.png';
@@ -39,12 +50,14 @@ ask.innerHTML = ' ';
 button.addEventListener('click', function() {
 
     if (input.value < 1) {
+        laugh();
         start.src = './img/02.png';
         ask.innerHTML = 'THAT...  is not a Question!';
-        laugh
+        spin2();
 }   else {
     spin();
-    setTimeout(hideAll, 500);
+    speak();
+    setTimeout(hideAll, 150);
     
 }});
 
@@ -75,21 +88,45 @@ function reset() {
 
 //ADD SPIN EFFECT TO MAIN 8BALL
 function spin() {
-    start.src = './img/blur1.png';
+    start.src = './img/blur2.png';
     start.classList.add('spin');
     
+
     setTimeout(function() {
         start.classList.remove('spin');
     }, 1000);
     
 }
 
+//ADD SPIN TO MORTIS BALL
+function spin2() {
+  start.src = './img/02.png';
+  start.classList.add('spin2');
+  
+  setTimeout(function() {
+      start.classList.remove('spin2');
+  }, 1000);
+  
+}
 
-//SET A SOUND FILE - DOESN'T WANT TO WORK...
+//SET A SOUND FILE
 function laugh() {
-    const audioContext = new AudioContext();
-    const element = document.querySelector(audio);
-    const source = audioContext.createMediaElementSource(element);
-    source.connect(audioContext.destination)
+    var audio = new Audio('sounds/VPLaugh.mp3');
     audio.play();
+    
   }
+
+
+  function speak() {
+    var audio = new Audio(randomSpeak);
+    audio.play();
+    
+  }
+
+  //GET SPEAK FUNCTION
+function getRandomSound(){
+  let randomSpeak = Math.floor(Math.random() * Magic.length);
+  //let talk = Magic[randomSpeak];
+}
+
+ //start.src = Magic[Math.floor(Math.random() * Magic.length)];
