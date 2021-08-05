@@ -57,7 +57,7 @@ h2{
   font-family: "French's Asylum";
 }
 
-
+/* ROTATE FA LOGO  */
 .rotate {
     animation: rotation 2s infinite linear;
   }

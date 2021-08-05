@@ -29,7 +29,7 @@ ballImageArray = [
     './img/23.png'
 ]
 
-Magic = [
+magicVoiceArray = [
   './sounds/Wizard10thLevel.wav',
   './sounds/WizardCastSpell.wav',
   './sounds/WizardDeciding.wav',
@@ -107,6 +107,7 @@ function spin2() {
   
 }
 
+
 //SET THE LAUGH SOUND FILE
 function laugh() {
     var audio = new Audio('sounds/VPLaugh.mp3');
@@ -115,16 +116,16 @@ function laugh() {
   }
 
 
-//   function speak() {
-//     var audio = new Audio(randomSpeak);
-//     audio.play();
+  function speak() {
+    var audio = new Audio(talk);
+    audio.play();
     
-//   }
+  }
 
-//   //GET SPEAK FUNCTION
-// function getRandomSound(){
-//   let randomSpeak = Math.floor(Math.random() * Magic.length);
-//   //let talk = Magic[randomSpeak];
-// }
+  //GET SPEAK FUNCTION
+function getRandomSound(){
+  let randomSpeak = Math.floor(Math.random() * magicVoiceArray.length);
+  let talk = Magic[randomSpeak];
+}
 
-//  //start.src = Magic[Math.floor(Math.random() * Magic.length)];
+ //start.src = Magic[Math.floor(Math.random() * Magic.length)];

@@ -1,0 +1,67 @@
+@import url("../css/style.css");
+
+body {
+    padding-left: 200px;
+    /* background: linear-gradient(90deg, rgba(177, 64, 200, 1) 0%,  */
+                /* rgba(109, 9, 121, 1) 35%, rgba(45, 1, 62, 1) 100%); */
+    background-image: url(../img/space.gif);  
+  }
+  
+  /*NAVBAR*/
+  .sidenav{
+      height: 100%;
+      width: 300px;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 15PX;
+      overflow-x: hidden;
+      padding-top: 20px;
+      padding: 10px;
+      text-shadow: 2px 2px #340146;
+      /* AN ATTEMPT TO ADD 3D TO SIDE BAR (USING THE BUTTON EFFECT), DIDN'T WORK, I DON'T KNOW WHY*/
+      background-image: -webkit-linear-gradient(283deg, rgba(255, 255, 255, 0.1) 50%, transparent 55%),-webkit-linear-gradient(top, rgba(255, 255, 255, 0.15), transparent);
+      border-radius: 6px;
+      box-shadow: 0 0 0 1px #091827 inset,0 0 0 2px rgba(255, 255, 255, 0.15) inset,0 4px 0 0      #071421,0 4px 0 1px rgba(0, 0, 0, 0.4),0 4px 4px 1px rgba(0, 0, 0, 0.5);
+      color: white !important;
+      text-align: center;
+      text-shadow: 4px 4px rgba(0, 0, 0, 0.5);
+      text-decoration: none !important;
+      -webkit-transition: all 10s linear;
+  }
+
+/*CENTER THE BALL*/
+.main {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 10vh;
+  }
+
+
+
+/* ROTATE FA LOGO  */
+  .rotate {
+    animation: rotation 2s infinite linear;
+  }
+
+  @keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(-359deg);
+    }
+  } 
+
+  .rotate2 {
+    animation: rotation 10s infinite linear;
+
+    @keyframes rotation {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(359deg);
+        }
+  }
