@@ -2,17 +2,15 @@
 
 body {
     padding-left: 200px;
-    /* background-image: url(../img/space.gif);   */
+    word-wrap:break-word;
+    background-image: url(../img/bug_background.png);  
   }
   
-#a{
-    font-family: "Stonecross";
-}
   
   /*NAVBAR*/
   .sidenav{
       height: 100%;
-      width: 300px;
+      width: 250px;
       position: fixed;
       z-index: 1;
       top: 0;
@@ -45,29 +43,24 @@ body {
     top: 10vh;
   }
 
-/* @import url('https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i'); */
+.bug {
+    display: flex;
+    justify-content: center;
+    position: relative;
 
-*
-{
+  }
+
+/* ANIMATION FOR DROP LETTERS */
+*{
   margin: 0;
   padding: 0;
 }
 
-body
-{
-  font-family: 'Lato', sans-serif;
-  font-size: 14px;
-  color: #999999;
-  word-wrap:break-word;
-}
-
-p
-{
+p{
   margin: 0 0 10px;
 }
 
-ul
-{
+ul{
   list-style: none;
 }
 
@@ -77,59 +70,17 @@ ul
   font-weight: 900;
   text-transform: uppercase;
   text-align: center;
-  padding: 0 0 200px;
-}
-
-/*.take-input {
-  margin: 50px 0 0;
-}
-
-.take-input input {
-  width: 400px;
-  height: 35px;
-  padding: 0 10px;
-  border-radius: 5px;
-  border: 1px solid #ececec;
-  margin: 0 15px 0 0;
-  font-size: 15px;
-}*/
-
-a, a:link, a:visited {
-  text-decoration: none;
-  padding: 9px 15px;
-  border: 1px solid #ececec;
-  border-radius: 5px;
-  color: gray;
+  padding: 0 0 80px;
 }
 
 .animate {
   font-size: 50px;
-  margin: 100px 0 0;
-  border-bottom: 2px solid #ccc;
+  margin: 50px 0 0;
+  border-bottom: 4px solid red;
 }
 
 .animate span {
   display: inline-block;
-}
-
-a.repeat {
-  display: inline-block;
-  font-size: 12px;
-  text-transform: none;
-  text-decoration: none;
-  color: orange;
-  padding: 5px 12px;
-  border: 1px solid rgba(0, 0, 0, 0.15);
-  font-weight: normal;
-  margin: 0 0 0 50px;
-  border-radius: 3px;
-  position: relative;
-  bottom: 15px;
-}
-
-a.repeat:hover {
-  background: rgba(0, 0, 0, 0.7);
-  color: white;
 }
 
 .animate span:nth-of-type(2) {
@@ -190,16 +141,17 @@ a.repeat:hover {
   animation-delay: .95s;
 }
 
-
 .five span {
     opacity: 0;
     transform: translate(0, -100px) rotate(360deg) scale(0);
     animation: dropVanish .5s forwards;
     font-family: "French's Asylum";
-    color: green;
-    font-size: 40px;
+    color: lawngreen;
+    text-shadow: 5px 3px #024C02;
+    font-size: 60px;
+
   }
-  
+ 
   
   @keyframes dropVanish {
     30% {
@@ -221,12 +173,12 @@ a.repeat:hover {
       opacity: 1;
     }
   }
+ /* END OF ANIMATION   */
   
   
-  
-/* ROTATE FA LOGO  */
+/* ROTATE BUG'S FACE  */
   .rotate {
-    animation: rotation 2s infinite linear;
+    animation: rotation 5s infinite linear;
   }
 
   @keyframes rotation {
@@ -238,14 +190,48 @@ a.repeat:hover {
     }
   } 
 
-  .rotate2 {
-    animation: rotation 10s infinite linear;
-
-    @keyframes rotation {
-        from {
-          transform: rotate(0deg);
-        }
-        to {
-          transform: rotate(359deg);
-        }
+/* ADD MUSIC  */
+  audio {
+    display: none;
   }
+  
+  p {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: rgba(238, 238, 238, 0.6);
+    font-size: 20px;
+  }
+  
+  button {
+    font-size: 16px;
+    color: #eee;
+    position: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70px;
+    padding: 15px;
+    border: none;
+    border-radius: 2px;
+    outline: none;
+    background: rgba(115, 67, 167, 0.8);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    opacity: 0.8;
+    cursor: pointer;
+    transition: all 0.4s ease-out;
+  }
+  
+  button.fade:hover {
+    opacity: 0.8;
+  }
+  
+  .fade {
+    opacity: 0.2;
+    top: 0;
+    left: 0;
+    transform: translate(0, 0);
+  }
+  

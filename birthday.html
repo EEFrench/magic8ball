@@ -13,72 +13,45 @@
       type="image/png" 
       href="img/favicon_bug.png">
   <!-- JAVASCRIPT LINK  -->
-  <!-- <script src="js/BDay.js" defer></script> -->
+  <script src="js/BDay.js" defer></script>
   <title>Happy Birthday Bug</title>
 </head>
 <body>
   <!-- TOPBAR -->
-<div class="topbar" style="background-color:red;">
+<!-- <div class="topbar" style="background-color:red;">
       <h1 id="title"></h1>
       <h1><label for="" id="ask" class="text"></label></h1>
-</div>
+</div> -->
 
 <!-- SIDENAV BAR  -->
 <div class="sidenav">
-  <a class="rotate"><img src="./img/start.png" alt="8Ball"style="width:150px;"></a>
-  <a class="navlink"   href="TheAnswer.html"></a>
-  <a class="navlink"   href="">Happy</a>
-  <a class="navlink"   href="">Birthday</a>
+  <a class="rotate"><img src="./img/bug.png" alt="Bug"style="width:150px;"></a>
+  <a class="navlink"   href="TheAnswer.html">Happy</a>
+  <a class="navlink"   href=""></a>
+  <a class="navlink"   href="index.html">Birthday</a>
   <a class="navlink"   href="">Bug</a>
-  <a class="navlink"   href="shiny.html"></a>
+  <a class="navlink"   href="shiny.html">!!!</a>
   <a class="navlink"   href=""></a>
 </div>
 
 <div class="main">
-  <!-- <div>
-      <ul>
-        <li>H</li>
-        <li>a</li>
-        <li>p</li>
-        <li>p</li>
-        <li>y</li>
-        <li class="spaced">B</li>
-        <li>i</li>
-        <li>r</li>
-        <li>t</li>
-        <li>h</li>
-        <li>d</li>
-        <li>a</li>
-        <li>y</li>
-        <li class="spaced">B</li>
-        <li>u</li>
-        <li>g</li>
-      </ul> -->
       <div class="container">
-        <!--<div class="take-input">
-           <input type="text" placeholder="Write any text" />
-          <a href="javascript:void(0);">Enter Text</a>
-        </div>-->
-        
           <div class="animate five">
-            <span>c</span><span>s</span><span>s</span><span>3</span> &nbsp;
-            <span>a</span><span>n</span><span>i</span><span>m</span><span>a</span><span>t</span><span>i</span><span>o</span><span>n</span><span>s</span>
+            <span>H</span><span>a</span><span>p</span><span>p</span><span>y</span> &nbsp;
+            <span>B</span><span>i</span><span>r</span><span>t</span><span>h</span><span>d</span><span>a</span><span>y</span><span>!</span><span>!</span>
           </div>
       
-        </div>
+        </div>     
   </div>
+<div class="bug">
+    <img src="./img/bugToo.png" alt="Bug"style="width:550px;">
 </div>
 
-<script>
-    const letters = document.querySelectorAll("li");
+<audio src="/sounds/Older.mp3"></audio>
+<button id="button">
+    <i class="fas fa-volume-up">pLAY</i>
+  </button>
+  <p>Music: Older</p>
 
-    setTimeout(() => {
-        Array.from(letters).forEach((letter, index) => {
-            setTimeout(() => {
-                letter.classList.toggle("show");
-            }, index + 150);
-        })
-    }, 1000);
-</script>
 </body>
 </html>
