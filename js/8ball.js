@@ -30,14 +30,14 @@ ballImageArray = [
 ]
 
 magicVoiceArray = [
-  './sounds/Wizard10thLevel.wav',
-  './sounds/WizardCastSpell.wav',
-  './sounds/WizardDeciding.wav',
-  './sounds/WizardEnterCombat.wav',
-  './sounds/WizardFindingSomething.wav',
-  './sounds/WizardGoFlag.wav',
-  './sounds/WizardSeeHostile.wav',
-  './sounds/WizardUpLevel.wav'
+  '/sounds/Wizard10thLevel.wav',
+  '/sounds/WizardCastSpell.wav',
+  '/sounds/WizardDeciding.wav',
+  '/sounds/WizardEnterCombat.wav',
+  '/sounds/WizardFindingSomething.wav',
+  '/sounds/WizardGoFlag.wav',
+  '/sounds/WizardSeeHostile.wav',
+  '/sounds/WizardUpLevel.wav'
 ]
 
 //ADD STARTING IMAGE
@@ -89,7 +89,7 @@ function reset() {
 function spin() {
     start.src = './img/blur.png';
     start.classList.add('spin');
-    
+    speak();
     setTimeout(function() {
         start.classList.remove('spin');
     }, 1000);
@@ -110,22 +110,13 @@ function spin2() {
 
 //SET THE LAUGH SOUND FILE
 function laugh() {
-    var audio = new Audio('sounds/VPLaugh.mp3');
+    const audio = new Audio('sounds/VPLaugh.mp3');
     audio.play();
     
   }
 
 
-  function speak() {
-    var audio = new Audio(talk);
-    audio.play();
-    
+  function speak(){
+    const voice = new Audio(magicVoiceArray[Math.floor(Math.random()*magicVoiceArray.length)]);
+    voice.play();
   }
-
-  //GET SPEAK FUNCTION
-function getRandomSound(){
-  let randomSpeak = Math.floor(Math.random() * magicVoiceArray.length);
-  let talk = Magic[randomSpeak];
-}
-
- //start.src = Magic[Math.floor(Math.random() * Magic.length)];
