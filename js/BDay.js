@@ -1,3 +1,4 @@
+//ANIMATE LETTERS
 const letters = document.querySelectorAll("li");
 
     setTimeout(() => {
@@ -8,13 +9,15 @@ const letters = document.querySelectorAll("li");
         })
     }, 1000);
 
+
+//PLAY MUSIC
 const button = document.querySelector("#button");
 const icon = document.querySelector("#button > i");
 const audio = document.querySelector("audio");
 
 button.addEventListener("click", () => {
   if (audio.paused) {
-    audio.volume = 0.2;
+    audio.volume = 1;
     audio.play();
     icon.classList.remove('fa-volume-up');
     icon.classList.add('fa-volume-mute');
