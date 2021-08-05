@@ -30,14 +30,14 @@ ballImageArray = [
 ]
 
 magicVoiceArray = [
-  './sounds/Wizard10thLevel.wav',
-  './sounds/WizardCastSpell.wav',
-  './sounds/WizardDeciding.wav',
-  './sounds/WizardEnterCombat.wav',
-  './sounds/WizardFindingSomething.wav',
-  './sounds/WizardGoFlag.wav',
-  './sounds/WizardSeeHostile.wav',
-  './sounds/WizardUpLevel.wav'
+  'sounds/Wizard10thLevel.wav',
+  'sounds/WizardCastSpell.wav',
+  'sounds/WizardDeciding.wav',
+  'sounds/WizardEnterCombat.wav',
+  'sounds/WizardFindingSomething.wav',
+  'sounds/WizardGoFlag.wav',
+  'sounds/WizardSeeHostile.wav',
+  'sounds/WizardUpLevel.wav'
 ]
 
 //ADD STARTING IMAGE
