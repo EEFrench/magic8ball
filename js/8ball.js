@@ -54,11 +54,18 @@ button.addEventListener('click', function() {
     if (input.value < 1) {
       ask.innerHTML = 'THAT...  is not a Question!';
       spin2();
-}   else {
-      spin();
-      setTimeout(clear, 150);
+
+    }    
+    else if (input.value == 'What is the meaning of life?' || input.value == 'What is the meaning of life the universe and everything?' || input.value == 'What is the meaning of the universe?') {
+     window.open('TheAnswer.html');
+
+    }   
+    else {
+          spin();
+          setTimeout(clear, 150);
     
 }});
+
 
 //HIDE RETURN BUTTON
 button2.style.display = 'none';
