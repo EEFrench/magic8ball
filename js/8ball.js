@@ -77,6 +77,7 @@ function hideAll() {
 
 //FUNCTION TO RESET TO RESET TO STARTING SCENE
 function reset() {
+    spin3();
     ask.innerHTML = ' ';
     input.style.display = 'block';
     input.value = '';
@@ -107,6 +108,15 @@ function spin2() {
   
 }
 
+function spin3() {
+  start.src = './img/blur.png';
+    start.classList.add('spin');
+
+    setTimeout(function() {
+        start.classList.remove('spin');
+    }, 1000);
+    
+}
 
 //SET THE LAUGH SOUND FILE
 function laugh() {
