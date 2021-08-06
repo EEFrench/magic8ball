@@ -14,12 +14,12 @@ body {
       position: fixed;
       z-index: 1;
       top: 0;
-      background-color: #af4375;
+      background-color: #690038;
       left: 15PX;
       overflow-x: hidden;
       padding-top: 20px;
       padding: 10px;
-      text-shadow: 2px 2px #340146;
+      text-shadow: 2px 2px #4a010c;
       /* AN ATTEMPT TO ADD 3D TO SIDE BAR (USING THE BUTTON EFFECT), DIDN'T WORK, I DON'T KNOW WHY*/
       background-image: -webkit-linear-gradient(283deg, rgba(255, 255, 255, 0.1) 50%, transparent 55%),-webkit-linear-gradient(top, rgba(255, 255, 255, 0.15), transparent);
       border-radius: 6px;
@@ -146,8 +146,8 @@ ul{
     transform: translate(0, -100px) rotate(360deg) scale(0);
     animation: dropVanish .5s forwards;
     font-family: "French's Asylum";
-    color: lawngreen;
-    text-shadow: 5px 3px #024C02;
+    color: #4c9d49;
+    text-shadow: 5px 3px #005b00;
     font-size: 60px;
 
   }
