@@ -3,9 +3,12 @@
 body {
     padding-left: 200px;
     word-wrap:break-word;
-    background-image: url(../img/bug_background.png);  
+    background-image: url(../img/HumptyTown.png);  
   }
   
+  .topbar{
+      font-family: "French's Asylum";
+  }
   
   /*NAVBAR*/
   .sidenav{
@@ -14,7 +17,7 @@ body {
       position: fixed;
       z-index: 1;
       top: 0;
-      background-color: #af4375;
+      background-color: #9a01cd;
       left: 15PX;
       overflow-x: hidden;
       padding-top: 20px;
@@ -32,7 +35,7 @@ body {
   }
 
   .sidenav .navlink{
-    font-family: "Nightmare Before Christmas";
+    font-family: "Ulitmmaue";
   }
 
 /* CENTER ALL*/
@@ -146,8 +149,8 @@ ul{
     transform: translate(0, -100px) rotate(360deg) scale(0);
     animation: dropVanish .5s forwards;
     font-family: "French's Asylum";
-    color: lawngreen;
-    text-shadow: 5px 3px #024C02;
+    color: yellow;
+    text-shadow: 5px 3px #c65c29;
     font-size: 60px;
 
   }

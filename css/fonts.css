@@ -168,8 +168,12 @@
   src: url(../fonts/WW2BlaHPLHS_1.ttf);
 }
 
-
 @font-face {
   font-family: "Ulitmmaue";
   src: url(../fonts/Ultimmaue_0.ttf);
+}
+
+@font-face {
+  font-family: "Nightmare Before Christmas";
+  src: url(../fonts/NightmareXmas.ttf);
 }
