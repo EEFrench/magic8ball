@@ -56,7 +56,7 @@ button.addEventListener('click', function() {
       spin2();
 
     }    
-    else if (input.value == 'What is the meaning of life?' || input.value == 'What is the meaning of life the universe and everything?' || input.value == 'What is the meaning of the universe?') {
+    else if (input.value == 'What is the meaning of life?' || input.value == 'What is the meaning of life the universe and everything?' || input.value == 'What is the meaning of the universe?'||input.value == 'What is the meaning of Life?' || input.value == 'What is the meaning of Life the Universe and Everything?' || input.value == 'What is the meaning of the Universe?'|| input.value == 'What is the meaning of everything?'|| input.value == 'What is the meaning of Everything') {
      window.open('TheAnswer.html');
 
     }   
