@@ -111,7 +111,7 @@ function spin2() {
 function spin3() {
   start.src = './img/blur.png';
     start.classList.add('spin');
-
+    speak2();
     setTimeout(function() {
         start.classList.remove('spin');
     }, 1000);
@@ -125,16 +125,17 @@ function laugh() {
     
   }
 
-//SET RANDOM VOICE FOR SPIN
-  // function speak(){
-  //   const voice = new Audio(magicVoiceArray[Math.floor(Math.random()*magicVoiceArray.length)]);
-  //   voice.play();
-  // }
-
+//WIZARD SPEAK FOR SPIN
   function speak() {
     const number = Math.floor(Math.random()*8);
     const audio = new Audio(magicVoiceArray[number]);
     
     audio.play();
     
+  }
+  
+  //SET RANDOM VOICE FOR SECOND SPIN
+  function speak2(){
+    const wVoice = new Audio('sounds/WizardIdle.wav');
+    wVoice.play();
   }
