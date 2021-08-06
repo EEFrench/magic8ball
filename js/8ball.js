@@ -56,7 +56,7 @@ button.addEventListener('click', function() {
       spin2();
 }   else {
       spin();
-      setTimeout(hideAll, 150);
+      setTimeout(clear, 150);
     
 }});
 
@@ -67,7 +67,7 @@ button2.addEventListener('click', function () {
 })
 
 //FUNCTION HIDE MAIN BUTTON & INPUT, AND PUT QUESTION IN TOPBAR
-function hideAll() {
+function clear() {
     input.style.display = 'none';
     button.style.display = 'none';
     button2.style.display = 'block';
